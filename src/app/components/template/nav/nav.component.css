@@ -1,0 +1,7 @@
+.side-nav{
+    overflow-y: hidden;
+}
+
+.side-nav:hover{
+    overflow-y: auto;
+}
