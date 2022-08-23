@@ -4,15 +4,16 @@
 
 export const environment = {
   production: false,
+  baseUrl: 'http://localhost:8080',
   envName: 'local',
   keycloak: {
     // Url of the Identity Provider 
     issuer: 'http://localhost:8081/realms/teste',
     // URL of the SPA to redirect the user to after login 
-    redirectUri: 'http://localhost:4200/*',
+    redirectUri: 'http://localhost:4200/',
     // The SPA's id. 
     // The SPA is registerd with this id at the auth-serverß 
-    clientId: 'teste',
+    clientId: 'prestador',
     responseType: 'code',
     // set the scope for the permissions the client should request 
     // The first three are defined by OIDC. 

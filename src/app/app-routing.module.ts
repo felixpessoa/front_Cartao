@@ -1,11 +1,16 @@
+import { CartoesCrudComponent } from './views/cartoes-crud/cartoes-crud.component';
 import { HomeComponent } from './views/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HomeComponent
+  },
+  {
+    path: 'cartoes-crud',
+    component: CartoesCrudComponent
   }
 
 ];

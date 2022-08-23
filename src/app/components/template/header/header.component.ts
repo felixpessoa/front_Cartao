@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 
 
@@ -9,12 +11,15 @@ import { OAuthService } from 'angular-oauth2-oidc';
 })
 export class HeaderComponent implements OnInit {
 
+
+
   constructor(
     private readonly oauthService: OAuthService
     ) { }
 
   ngOnInit(): void {
   }
+
 
   logout() { 
     this.oauthService.logOut(); 

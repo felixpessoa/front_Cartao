@@ -1,0 +1,52 @@
+<div class="container">
+  
+  <mat-form-field class="form-field" appearance="fill">
+    <mat-label>Valor da renda</mat-label>
+    <input matInput type="number" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="rendaAte(value)">
+      <mat-icon>close</mat-icon>
+    </button>
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource">
+      <!-- Position Column -->
+      <ng-container matColumnDef="registro">
+        <th mat-header-cell *matHeaderCellDef> Registro </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="cartao">
+        <th mat-header-cell *matHeaderCellDef> Cartão </th>
+        <td mat-cell *matCellDef="let element"> {{element.cartao}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="bandeira">
+        <th mat-header-cell *matHeaderCellDef> Bandeira </th>
+        <td mat-cell *matCellDef="let element"> {{element.bandeira}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="renda">
+        <th mat-header-cell *matHeaderCellDef> Renda </th>
+        <td mat-cell *matCellDef="let element"> {{element.renda}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="limite">
+        <th mat-header-cell *matHeaderCellDef> Limite </th>
+        <td mat-cell *matCellDef="let element"> {{element.limite}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons 
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
