@@ -1,3 +1,4 @@
+import { AuthConfigModule } from './components/auth/auth.config.module';
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -35,7 +36,8 @@ import { NavComponent } from './components/template/nav/nav.component';
     MatListModule,
     MatDividerModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    AuthConfigModule
 
   ],
   providers: [],
